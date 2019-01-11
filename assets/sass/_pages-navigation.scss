@@ -1,0 +1,115 @@
+.widget_bsa_pages_navigation {
+  position: relative;
+  // Pages navigation button on mobile
+  .mobile-pages-navigation-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    @include media-breakpoint-up(sm) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  // Links indented list
+  .menu {
+    display: none;
+    box-shadow: 0px 2px 3px transparentize(#000000, 0.5);
+    @include media-breakpoint-up(sm) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include media-breakpoint-up(md) {
+      box-shadow: none;
+      display: block !important;
+      width: 100%;
+      margin: 0;
+    }
+    // Remove list style from all uls
+    ul {
+      list-style: none;
+      // Give al <li> a white BG by default
+      li {
+        border-top: solid 1px;
+        background-color: #FFF;
+        // Make all <a> be full width for easy pressing
+        a {
+          display: block;
+          width: 100%;
+
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          transition: ease 0.3s;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    // Remove padding from first ul on the list
+    > ul {
+      padding-left: 0px;
+    }
+    > ul > li {
+      border-top: none;
+      // Level 3 padding
+      > .children .children > li > a {
+        padding-left: 30px;
+      }
+      // Level 4 padding
+      > .children .children > li > .children > li > a {
+        padding-left: 45px;
+      }
+      // Level 5 and on padding
+      > .children .children > li > .children > li > .children li a {
+        padding-left: 60px;
+      }
+    }
+    // Remove padding from children ul's
+    .children {
+      padding-left: 0;
+    }
+    // Current page item style
+    .current_page_item {
+      > a {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.sticky {
+    .mobile-pages-navigation-toggler {
+      position: fixed;
+      top: 90px;
+      width: 100%;
+      left: 0;
+      z-index: 1;
+    }
+    .menu {
+      position: fixed;
+      top: 150px;
+      max-height: calc(100% - 150px);
+      width: 100%;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.logged-in {
+  .widget_bsa_pages_navigation.sticky {
+    .mobile-pages-navigation-toggler {
+      top: 136px;
+    }
+    .menu {
+      top: 186px;
+    }
+  }
+}

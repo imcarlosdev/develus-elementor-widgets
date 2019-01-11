@@ -1,0 +1,124 @@
+.widget_bsa_pages_navigation {
+  position: relative;
+}
+
+.widget_bsa_pages_navigation .mobile-pages-navigation-toggler {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.widget_bsa_pages_navigation .menu {
+  display: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.widget_bsa_pages_navigation .menu ul {
+  list-style: none;
+}
+
+.widget_bsa_pages_navigation .menu ul li {
+  border-top: solid 1px;
+  background-color: #FFF;
+}
+
+.widget_bsa_pages_navigation .menu ul li a {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: ease 0.3s;
+}
+
+.widget_bsa_pages_navigation .menu ul li a:hover {
+  text-decoration: none;
+}
+
+.widget_bsa_pages_navigation .menu > ul {
+  padding-left: 0px;
+}
+
+.widget_bsa_pages_navigation .menu > ul > li {
+  border-top: none;
+}
+
+.widget_bsa_pages_navigation .menu > ul > li > .children .children > li > a {
+  padding-left: 30px;
+}
+
+.widget_bsa_pages_navigation .menu > ul > li > .children .children > li > .children > li > a {
+  padding-left: 45px;
+}
+
+.widget_bsa_pages_navigation .menu > ul > li > .children .children > li > .children > li > .children li a {
+  padding-left: 60px;
+}
+
+.widget_bsa_pages_navigation .menu .children {
+  padding-left: 0;
+}
+
+.widget_bsa_pages_navigation .menu .current_page_item > a {
+  pointer-events: none;
+}
+
+.widget_bsa_pages_navigation.sticky .mobile-pages-navigation-toggler {
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.widget_bsa_pages_navigation.sticky .menu {
+  position: fixed;
+  top: 150px;
+  max-height: calc(100% - 150px);
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.logged-in .widget_bsa_pages_navigation.sticky .mobile-pages-navigation-toggler {
+  top: 136px;
+}
+
+.logged-in .widget_bsa_pages_navigation.sticky .menu {
+  top: 186px;
+}
+
+@media (min-width: 576px) {
+  .widget_bsa_pages_navigation .mobile-pages-navigation-toggler {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .widget_bsa_pages_navigation .menu {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .widget_bsa_pages_navigation .mobile-pages-navigation-toggler {
+    display: none;
+  }
+
+  .widget_bsa_pages_navigation .menu {
+    box-shadow: none;
+    display: block !important;
+    width: 100%;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
