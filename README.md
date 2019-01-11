@@ -1,8 +1,10 @@
 # Develus Elementor Widgets
 
-A Wordpress Plugin with Widgets for Elementor
+A Wordpress Plugin with Widgets for Elementor.
 
-### Widgets
+Install, Activate, Use it.
+
+###Widgets
 
 - PHP Includer
 
